@@ -1,0 +1,315 @@
+```css
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #173b25;
+  background: #f5f8f3;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+/* Paradise Nursery Landing Page */
+.landing-page {
+  min-height: 100vh;
+
+  /* Background image for Paradise Nursery landing page */
+  background-image:
+    linear-gradient(
+      rgba(0, 50, 20, 0.55),
+      rgba(0, 50, 20, 0.55)
+    ),
+    url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1800&q=85");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.landing-overlay {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.hero-card {
+  max-width: 600px;
+  padding: 45px;
+  border-radius: 25px;
+  color: white;
+  background: rgba(10, 45, 25, 0.65);
+  backdrop-filter: blur(5px);
+}
+
+.eyebrow {
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.hero-card h1 {
+  font-size: clamp(42px, 7vw, 80px);
+  line-height: 1;
+  margin: 10px 0 20px;
+}
+
+.hero-card p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.primary-button,
+.secondary-link {
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 10px;
+  padding: 13px 22px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.primary-button {
+  background: #a7d46f;
+  color: #173b25;
+}
+
+.secondary-link {
+  border: 1px solid white;
+  color: white;
+}
+
+/* Navigation */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 5%;
+  background: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: bold;
+  color: #206238;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #285b38;
+  font-weight: bold;
+}
+
+/* Main content */
+.page {
+  min-height: 100vh;
+}
+
+.content {
+  width: 92%;
+  max-width: 1180px;
+  margin: auto;
+  padding: 35px 0 60px;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* About Us */
+.about-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.about-card h1 {
+  color: #206238;
+}
+
+.about-card h2 {
+  margin-top: 30px;
+  color: #285b38;
+}
+
+.about-card li {
+  margin: 10px 0;
+}
+
+/* Plant products */
+.category-section {
+  margin: 35px 0;
+}
+
+.category-section h2 {
+  border-left: 5px solid #74a94d;
+  padding-left: 12px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  overflow: hidden;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.product-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 17px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.add-button {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 9px;
+  background: #2d7441;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-button:disabled {
+  background: #9eafa2;
+  cursor: not-allowed;
+}
+
+/* Cart */
+.cart-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+.cart-row {
+  display: grid;
+  grid-template-columns: 100px 1fr auto auto;
+  gap: 18px;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #e7ece7;
+}
+
+.cart-row img {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #e7f0e4;
+  cursor: pointer;
+}
+
+.delete-button {
+  border: none;
+  padding: 10px 13px;
+  border-radius: 8px;
+  background: #f8dddd;
+  color: #9c2929;
+  cursor: pointer;
+}
+
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.checkout-button {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 9px;
+  background: #2d7441;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.continue-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #236237;
+  font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-card {
+    padding: 30px;
+  }
+
+  .cart-row {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .cart-row img {
+    width: 80px;
+    height: 70px;
+  }
+}
+```
